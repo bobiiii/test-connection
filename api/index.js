@@ -5,9 +5,10 @@ const app = express();
 
 const { startDB } = require('../src/db/dbConfig');
 
-startDB();
+// startDB();
 
 app.get('/', (req, res) => {
+  startDB();
   res.status(200).json({ message: 'Working fine' });
 });
 
